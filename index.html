@@ -1,59 +1,81 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Process Chart</title>
-    <style>
-        .chart {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            padding: 20px;
-        }
-        .box {
-            width: 200px;
-            height: 150px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            font-size: 16px;
-            font-weight: bold;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 10px;
-        }
-        .box.c1 { background-color: rgb(63, 78, 99); }
-        .box.c2 { background-color: rgb(114, 152, 190); }
-        .box.c3 { background-color: rgb(204, 0, 0); }
-        .box.c4 { background-color: rgb(255, 192, 0); }
-        .box.c5 { background-color: rgb(112, 173, 71); }
-        .box.c6 { background-color: rgb(46, 117, 182); }
-        .box.c7 { background-color: rgb(109, 55, 149); }
-        .box.c8 { background-color: rgb(153, 102, 0); }
-        .box.c9 { background-color: rgb(235, 108, 21); }
-        .box.c10 { background-color: rgb(168, 16, 106); }
-        a {
-            color: #fff;
-            text-decoration: underline;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Process Chart</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+    }
+    .chart {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        max-width: 1200px;
+        margin: auto;
+    }
+    .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Move content to top */
+        align-items: center;
+        text-align: center;
+        font-size: 16px;
+        color: #fff;
+        border-radius: 10px;
+        padding: 15px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .box h3 {
+        font-weight: bold;
+        margin-bottom: 10px; /* Space between title and links */
+    }
+    .box a {
+        color: #fff;
+        text-decoration: underline;
+        font-weight: normal; /* Links not bold */
+        display: block; /* Each link on its own line */
+        margin: 4px 0;
+    }
+    .c1 { background-color: rgb(63, 78, 99); }
+    .c2 { background-color: rgb(114, 152, 190); }
+    .c3 { background-color: rgb(204, 0, 0); }
+    .c4 { background-color: rgb(255, 192, 0); color: #000; }
+    .c5 { background-color: rgb(112, 173, 71); }
+    .c6 { background-color: rgb(46, 117, 182); }
+    .c7 { background-color: rgb(109, 55, 149); }
+    .c8 { background-color: rgb(153, 102, 0); }
+    .c9 { background-color: rgb(235, 108, 21); }
+    .c10 { background-color: rgb(168, 16, 106); }
+</style>
 </head>
 <body>
-    <div class="chart">
-        <div class="box c1">C1: Doel & Context<br><a href="https://beevaloo-my.sharepoint.com/:f:/p/db/IgD3pwvXOHXPSJXqLs9a241gAZHFNxIhY25Kvv535q-SM9I?e=cRSLBU">4.1 Contextanalyse</a></div>
-        <div class="box c4">C4: Strategie & Planning</div>
-        <div class="box c6">C6: Doorlopen Levenscyclus</div>
-        <div class="box c8">C8: Risicobeheer</div>
-        <div class="box c2">C2: Leiderschap & Governance</div>
-        <div></div> <!-- Empty spot for alignment -->
-        <div></div> <!-- Empty spot for alignment -->
-        <div class="box c9">C9: Monitoring en continue verbetering</div>
-        <div class="box c3">C3: Organisatie & Mens</div>
-        <div class="box c5">C5: Besluitvorming</div>
-        <div class="box c7">C7: Informatiebeheer<br><a href="https://beevaloo-my.sharepoint.com/:f:/p/db/IgAaJlU27YFgRYqKZtKWhfxDATFUfyxcUozLInwXGjMsC-M?e=4l4ZgG">Document Link</a></div>
-        <div class="box c10">C10: Waarden & Uitkomsten</div>
+<div class="chart">
+    <div class="box c1">
+        <h3>C1: Doel &amp; Context</h3>
+        <a href="https://beevaloo-my.sharepoint.com/:f:/p/db/IgD3pwvXOHXPSJXqLs9a241gAZHFNxIhY25Kvv535q-SM9I?e=cRSLBU">4.1 Contextanalyse</a>
     </div>
+    <div class="box c4"><h3>C4: Strategie &amp; Planning</h3></div>
+    <div class="box c6"><h3>C6: Doorlopen Levenscyclus</h3></div>
+    <div class="box c8"><h3>C8: Risicobeheer</h3></div>
+    <div class="box c2"><h3>C2: Leiderschap &amp; Governance</h3></div>
+    <div class="box c9"><h3>C9: Monitoring en continue verbetering</h3></div>
+    <div class="box c3"><h3>C3: Organisatie &amp; Mens</h3></div>
+    <div class="box c5"><h3>C5: Besluitvorming</h3></div>
+    <div class="box c7">
+        <h3>C7: Informatiebeheer</h3>
+        <a href="https://beevaloo-my.sharepoint.com/:f:/p/db/IgAaJlU27YFgRYqKZtKWhfxDATFUfyxcUozLInwXGjMsC-M?e=4l4ZgG">7.5 Informatiebeheersing</a>
+    </div>
+    <div class="box c10"><h3>C10: Waarden &amp; Uitkomsten</h3></div>
+</div>
 </body>
 </html>
