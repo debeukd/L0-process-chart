@@ -4,22 +4,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Process Chart</title>
+<title>Process Chart Fixed Layout</title>
 <style>
     body {
         margin: 0;
         font-family: Arial, sans-serif;
         background: #f4f4f4;
     }
+
+    /* Container with fixed grid that scales */
+    .chart-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+
     .chart {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, auto);
+        grid-template-columns: repeat(4, 200px);
+        grid-template-rows: repeat(3, 150px);
         gap: 20px;
-        padding: 20px;
-        max-width: 1200px;
-        margin: auto;
+        transform-origin: top left;
     }
+
+    /* Scale down when screen is smaller */
+    @media (max-width: 1000px) {
+        .chart {
+            transform: scale(0.8);
+        }
+    }
+    @media (max-width: 800px) {
+        .chart {
+            transform: scale(0.6);
+        }
+    }
+    @media (max-width: 600px) {
+        .chart {
+            transform: scale(0.5);
+        }
+    }
+
     .box {
         display: flex;
         flex-direction: column;
@@ -29,15 +54,5 @@
         font-size: 16px;
         color: #fff;
         border-radius: 10px;
-        padding: 15px;
-        min-height: 150px;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .box:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-    .box h3 {
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
+        padding: 10px;
+        box-sizing: border-box;
