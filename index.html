@@ -6,9 +6,8 @@
     <title>Process Chart</title>
     <style>
         .chart {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
             gap: 20px;
             padding: 20px;
         }
@@ -43,15 +42,15 @@
 </head>
 <body>
     <div class="chart">
-        <a href="#" class="box c1">C1: Doel & Context<br><a href="https://beevaloo-my.sharepoint.com/:f:/p/db/IgD3pwvXOHXPSJXqLs9a241gAZHFNxIhY25Kvv535q-SM9I?e=cRSLBU">4.1 Contextanalyse</a></a>
-        <div class="box c2">C2: Leiderschap & Governance</div>
-        <div class="box c3">C3: Organisatie & Mens</div>
+        <div class="box c1">C1: Doel & Context<br><a href="https://beevaloo-my.sharepoint.com/:f:/p/db/IgD3pwvXOHXPSJXqLs9a241gAZHFNxIhY25Kvv535q-SM9I?e=cRSLBU">4.1 Contextanalyse</a></div>
         <div class="box c4">C4: Strategie & Planning</div>
-        <div class="box c5">C5: Besluitvorming</div>
         <div class="box c6">C6: Doorlopen Levenscyclus</div>
-        <div class="box c7">C7: Informatiebeheer<br><a href="https://beevaloo-my.sharepoint.com/:f:/p/db/IgAaJlU27YFgRYqKZtKWhfxDATFUfyxcUozLInwXGjMsC-M?e=4l4ZgG">Document Link</a></div>
         <div class="box c8">C8: Risicobeheer</div>
+        <div class="box c2">C2: Leiderschap & Governance</div>
         <div class="box c9">C9: Monitoring en continue verbetering</div>
+        <div class="box c3">C3: Organisatie & Mens</div>
+        <div class="box c5">C5: Besluitvorming</div>
+        <div class="box c7">C7: Informatiebeheer<br><a href="https://beevaloo-my.sharepoint.com/:f:/p/db/IgAaJlU27YFgRYqKZtKWhfxDATFUfyxcUozLInwXGjMsC-M?e=4l4ZgG">Document Link</a></div>
         <div class="box c10">C10: Waarden & Uitkomsten</div>
     </div>
 </body>
