@@ -5,38 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Process Chart</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        .chart {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
         }
         .box {
-            margin: 20px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            width: 200px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10px;
         }
-        .title {
-            margin-bottom: 5px;
-            font-size: 18px;
-        }
-        .link {
-            font-size: 12px;  /* Smaller font size */
-            font-weight: normal;  /* Not bold */
-            display: block;  /* Appear under title */
+        .box.c1 { background-color: rgb(63, 78, 99); }
+        .box.c2 { background-color: rgb(114, 152, 190); }
+        .box.c3 { background-color: rgb(204, 0, 0); }
+        .box.c4 { background-color: rgb(255, 192, 0); }
+        .box.c5 { background-color: rgb(112, 173, 71); }
+        .box.c6 { background-color: rgb(46, 117, 182); }
+        .box.c7 { background-color: rgb(109, 55, 149); }
+        .box.c8 { background-color: rgb(153, 102, 0); }
+        .box.c9 { background-color: rgb(235, 108, 21); }
+        .box.c10 { background-color: rgb(168, 16, 106); }
+        a {
+            color: #fff;
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="box">
-        <div class="title">Box Title 1</div>
-        <a href="#" class="link">Link 1</a>
-    </div>
-    <div class="box">
-        <div class="title">Box Title 2</div>
-        <a href="#" class="link">Link 2</a>
-    </div>
-    <div class="box">
-        <div class="title">Box Title 3</div>
-        <a href="#" class="link">Link 3</a>
+    <div class="chart">
+        <div class="box c1">C1: Doel & Context<br><a href="https://beevaloo-my.sharepoint.com/:f:/p/db/IgD3pwvXOHXPSJXqLs9a241gAZHFNxIhY25Kvv535q-SM9I?e=cRSLBU">4.1 Contextanalyse</a></div>
+        <div class="box c4">C4: Strategie & Planning</div>
+        <div class="box c6">C6: Doorlopen Levenscyclus</div>
+        <div class="box c8">C8: Risicobeheer</div>
+        <div class="box c2">C2: Leiderschap & Governance</div>
+        <div></div> <!-- Empty spot for alignment -->
+        <div></div> <!-- Empty spot for alignment -->
+        <div class="box c9">C9: Monitoring en continue verbetering</div>
+        <div class="box c3">C3: Organisatie & Mens</div>
+        <div class="box c5">C5: Besluitvorming</div>
+        <div class="box c7">C7: Informatiebeheer<br><a href="https://beevaloo-my.sharepoint.com/:f:/p/db/IgAaJlU27YFgRYqKZtKWhfxDATFUfyxcUozLInwXGjMsC-M?e=4l4ZgG">Document Link</a></div>
+        <div class="box c10">C10: Waarden & Uitkomsten</div>
     </div>
 </body>
 </html>
