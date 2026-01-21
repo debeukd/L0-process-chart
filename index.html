@@ -13,7 +13,8 @@
     }
     .chart {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, auto);
         gap: 20px;
         padding: 20px;
         max-width: 1200px;
@@ -22,13 +23,14 @@
     .box {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start; /* Move content to top */
+        justify-content: flex-start;
         align-items: center;
         text-align: center;
         font-size: 16px;
         color: #fff;
         border-radius: 10px;
         padding: 15px;
+        min-height: 150px;
         transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     .box:hover {
@@ -37,45 +39,5 @@
     }
     .box h3 {
         font-weight: bold;
-        margin-bottom: 10px; /* Space between title and links */
+        margin-bottom: 10px;
     }
-    .box a {
-        color: #fff;
-        text-decoration: underline;
-        font-weight: normal; /* Links not bold */
-        display: block; /* Each link on its own line */
-        margin: 4px 0;
-    }
-    .c1 { background-color: rgb(63, 78, 99); }
-    .c2 { background-color: rgb(114, 152, 190); }
-    .c3 { background-color: rgb(204, 0, 0); }
-    .c4 { background-color: rgb(255, 192, 0); color: #000; }
-    .c5 { background-color: rgb(112, 173, 71); }
-    .c6 { background-color: rgb(46, 117, 182); }
-    .c7 { background-color: rgb(109, 55, 149); }
-    .c8 { background-color: rgb(153, 102, 0); }
-    .c9 { background-color: rgb(235, 108, 21); }
-    .c10 { background-color: rgb(168, 16, 106); }
-</style>
-</head>
-<body>
-<div class="chart">
-    <div class="box c1">
-        <h3>C1: Doel &amp; Context</h3>
-        <a href="https://beevaloo-my.sharepoint.com/:f:/p/db/IgD3pwvXOHXPSJXqLs9a241gAZHFNxIhY25Kvv535q-SM9I?e=cRSLBU">4.1 Contextanalyse</a>
-    </div>
-    <div class="box c4"><h3>C4: Strategie &amp; Planning</h3></div>
-    <div class="box c6"><h3>C6: Doorlopen Levenscyclus</h3></div>
-    <div class="box c8"><h3>C8: Risicobeheer</h3></div>
-    <div class="box c2"><h3>C2: Leiderschap &amp; Governance</h3></div>
-    <div class="box c9"><h3>C9: Monitoring en continue verbetering</h3></div>
-    <div class="box c3"><h3>C3: Organisatie &amp; Mens</h3></div>
-    <div class="box c5"><h3>C5: Besluitvorming</h3></div>
-    <div class="box c7">
-        <h3>C7: Informatiebeheer</h3>
-        <a href="https://beevaloo-my.sharepoint.com/:f:/p/db/IgAaJlU27YFgRYqKZtKWhfxDATFUfyxcUozLInwXGjMsC-M?e=4l4ZgG">7.5 Informatiebeheersing</a>
-    </div>
-    <div class="box c10"><h3>C10: Waarden &amp; Uitkomsten</h3></div>
-</div>
-</body>
-</html>
